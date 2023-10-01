@@ -1,0 +1,5 @@
+<nav>
+    <ul>
+        <li *ngFor="let menu of menus" (click)="navigateMenu(menu)">{{menu.name}}</li>
+    </ul>
+</nav>

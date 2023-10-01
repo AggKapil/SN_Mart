@@ -1,0 +1,13 @@
+<form class="product_Form" [formGroup]='productForm' (ngSubmit)="addProduct()">
+
+    <input type="text" class="control" placeholder="name" formControlName="name" 
+           [ngClass]="{'error': productForm.controls['name'].invalid && (productForm.controls['name'].dirty  || productForm.controls['name'].touched)}">
+    <input type="text" class="control" placeholder="category" formControlName="category">
+    <input type="text" class="control" placeholder="brand" formControlName="brand">
+    <input type="text" class="control" placeholder="price" formControlName="price">
+    <input type="text" class="control" placeholder="quantity" formControlName="quantity">
+    <input type="text" class="control" placeholder="unit" formControlName="unit">
+
+    <input type="submit" value="Submit">
+
+</form>

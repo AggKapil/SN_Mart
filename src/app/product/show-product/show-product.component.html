@@ -1,0 +1,17 @@
+<h1>SN Mart Products:</h1>
+<div class="search-container"><input type="text" name="" id="" (input)="searchProduct($event)"></div>
+<div class="product-list-container">
+    <ul>
+        <li *ngFor="let product of filterProduct">
+            <div class="list">
+                <div class="item">Name: {{product.name}}</div>
+                <div class="item">Category: {{product.category}}</div>
+                <div class="item">Brand: {{product.brand}}</div>
+                <div class="item">Price: {{product.price | currency:"INR":'symbol'}}</div>
+                <div class="item" *ngIf="isShowProduct">Qunatity: {{product.quantity}}</div>
+                <div class="item">Unit: {{product.unit}}</div>
+                <button *ngIf="!isShowProduct" (click)="addToCart(product)">Cart</button>
+            </div>
+        </li>
+    </ul>
+</div>

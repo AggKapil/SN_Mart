@@ -1,0 +1,28 @@
+<div class="cart-container">
+  <div class="header">
+    <h4>SN Mart Cart</h4>
+  </div>
+  <div class="table-head">
+    <div class="head-item">Name</div>
+    <div class="head-item">Unit</div>
+    <div class="head-item">Price</div>
+    <div class="head-item">Qunatity</div>
+    <div class="head-item">Total</div>
+    <div class="action"></div>
+  </div>
+  <div class="table-body">
+    <div class="table-row" *ngFor="let cartItem of cartlist; let i = index">
+      <div class="item">{{cartItem.name}}</div>
+      <div class="item">{{cartItem.unit}}</div>
+      <div class="item">{{cartItem.price}}</div>
+      <div class="item">{{cartItem.quantity}}</div>
+      <div class="item">{{cartItem.total}}</div>
+      <div class="action">
+        <button (click)="cs.deleteFromCart(i)">Delete</button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>Total Amount: {{calculateTotal()}}</h2>
+  </div>
+</div>
