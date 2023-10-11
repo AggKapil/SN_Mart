@@ -1,28 +1,82 @@
 <div class="cart-container">
-  <div class="header">
-    <h4>SN Mart Cart</h4>
+    <div class="header">
+      <h4>SN Mart Cart</h4>
+    </div>
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Unit</th>
+          <th scope="col">Price</th>
+          <th scope="col">Qunatity</th>
+          <th scope="col">Total</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let cartItem of cartlist; let i = index">
+        <tr>
+          <td>{{cartItem.cName}}</td>
+          <td>{{cartItem.cUnit}}</td>
+          <td>{{cartItem.cPrice}}</td>
+          <td>{{cartItem.cQuantity}}</td>
+          <td>{{cartItem.cTotal}}</td>
+          <td><button class="btn btn-primary" (click)="cs.deleteFromCart(i)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <div class="table-head">
-    <div class="head-item">Name</div>
-    <div class="head-item">Unit</div>
-    <div class="head-item">Price</div>
-    <div class="head-item">Qunatity</div>
-    <div class="head-item">Total</div>
-    <div class="action"></div>
-  </div>
-  <div class="table-body">
-    <div class="table-row" *ngFor="let cartItem of cartlist; let i = index">
-      <div class="item">{{cartItem.name}}</div>
-      <div class="item">{{cartItem.unit}}</div>
-      <div class="item">{{cartItem.price}}</div>
-      <div class="item">{{cartItem.quantity}}</div>
-      <div class="item">{{cartItem.total}}</div>
-      <div class="action">
-        <button (click)="cs.deleteFromCart(i)">Delete</button>
+    <!-- <form class="report_Form" [formGroup]='reportForm' (ngSubmit)="report()">
+  <input type="text" class="control" placeholder="Enter cart owner" formControlName="ownerName">
+  <input type="text" class="control" formControlName="paymentMode">
+  <div class="item">{{cartItem.total}}</div>
+  <button (click)="sellClicked()">Sell</button>
+</form> -->
+
+<div>
+  <div class="footer">
+    <form class="sellForm" [formGroup]='userForm'>
+      <div class="">
+        <input type="text" placeholder="Enter cart owner" formControlName="user"
+          [ngClass]="{'error': userForm.controls['user'].invalid && (userForm.controls['user'].dirty  || userForm.controls['user'].touched)}">
       </div>
+      <!-- Payment Method -->
+      <div class="">
+        <select class="paymentMode-select" formControlName="paymentMode">
+          <option selected value="">Payment Method</option>
+          <option *ngFor="let item of paymentMethods; let i=index" value="{{item}}">{{item | titlecase}}
+          </option>
+        </select>
+      </div>
+    </form>
+    <div>
+      <h6>Total Amount: {{calculateTotal()}}</h6>
+    </div>
+    <div>
+      <!-- <input class="btn btn-primary" type="submit" value="Sell"> -->
+      <button class="btn btn-primary" (click)="orderPlaced()">Sell</button>
     </div>
   </div>
-  <div>
-    <h2>Total Amount: {{calculateTotal()}}</h2>
-  </div>
 </div>
+
+
+<!-- Working code 
+<div class="table-head">
+  <div class="head-item">Name</div>
+  <div class="head-item">Unit</div>
+  <div class="head-item">Price</div>
+  <div class="head-item">Qunatity</div>
+  <div class="head-item">Total</div>
+  <div class="action"></div>
+</div>
+<div class="table-body">
+  <div class="table-row" *ngFor="let cartItem of cartlist; let i = index">
+    <div class="item">{{cartItem.name}}</div>
+    <div class="item">{{cartItem.unit}}</div>
+    <div class="item">{{cartItem.price}}</div>
+    <div class="item">{{cartItem.quantity}}</div>
+    <div class="item">{{cartItem.total}}</div>
+    <div class="action">
+      <button (click)="cs.deleteFromCart(i)">Delete</button>
+    </div>
+  </div>
+</div> -->

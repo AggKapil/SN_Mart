@@ -28,12 +28,14 @@ getProduct(){
 addToCart(product:Product){
   //mapping a product in cart item
   const cart: Cart = {
-    id:product.id,
-    name: product.name,
-    unit:product.unit,
-    price:product.price,
-    quantity: 1,
-    total:product.price
+    CId:product.pId,
+    cName: product.pName,
+    cCategory: product.pCategory,
+    cBrand: product.pBrand,
+    cUnit:product.pUnit,
+    cPrice:product.pPrice,
+    cQuantity: 1,
+    cTotal:product.pPrice
   };
   //adding a product in the cart list
   
@@ -42,6 +44,9 @@ this.cs.addToCart(cart);
 
 searchProduct(event:any){
   console.log(event.target.value);
-this.filterProduct = this.products.filter((product: Product) => product.name.includes(event.target.value) );
+this.filterProduct = this.products.filter((product: Product) => 
+                      product.pName.includes(event.target.value) ||
+                      product.pCategory.includes(event.target.value) || 
+                      product.pBrand.includes(event.target.value));
 }
 }

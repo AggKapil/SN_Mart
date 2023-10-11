@@ -10,10 +10,10 @@ carts:Cart[]=[];
   constructor() { }
 
   addToCart(cart:Cart){
-    const tempCart = this.carts.find((cartItem: Cart) => cart.id === cartItem.id);
+    const tempCart = this.carts.find((cartItem: Cart) => cart.CId === cartItem.CId);
     if(tempCart){
-      tempCart.quantity++;
-      tempCart.total = tempCart.price * tempCart.quantity;
+      tempCart.cQuantity++;
+      tempCart.cTotal = tempCart.cPrice * tempCart.cQuantity;
     }
     else{
     this.carts.push(cart);

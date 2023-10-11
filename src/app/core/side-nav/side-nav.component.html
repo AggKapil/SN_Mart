@@ -1,0 +1,12 @@
+<div class="side-nav-content border-white">
+    <ul class="nav-list border-list" [ngClass]="{'side-nav-open': sideNavStatus}">
+        <li class="nav-list-item border-white" *ngFor="let item of list" (click)="navigateMenu(item)" 
+             data-toggle="tooltip" data-placement="bottom" title="{{item.name}}">
+            <i class="{{item.icon}} border-white"></i>
+            <span class="border-white">
+                {{item.name}}
+            </span>
+
+        </li>
+    </ul>
+</div>

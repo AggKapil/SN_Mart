@@ -1,9 +1,9 @@
 export interface Product {
-  id: string,
-  name: string
-  category: string
-  brand: string
-  price: number
-  quantity: string
-  unit: string
+  pId: string,
+  pName: string
+  pCategory: string
+  pBrand: string
+  pPrice: number
+  pQuantity: string
+  pUnit: string
 }

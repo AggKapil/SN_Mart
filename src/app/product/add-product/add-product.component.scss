@@ -1,6 +1,19 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    height: 100%;
+}
+
+form{
+    width:500px;
+}
+
 .control{
     display: block;
-    margin: 10px;
+    margin-left: 140px;
     padding:5px;
     text-align: center;
     border: 1px solid gray;

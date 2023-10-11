@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "SN-Mart": {
+    "SN_Mart": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "SN-Mart:build:production"
+              "browserTarget": "SN_Mart:build:production"
             },
             "development": {
-              "browserTarget": "SN-Mart:build:development"
+              "browserTarget": "SN_Mart:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "SN-Mart:build"
+            "browserTarget": "SN_Mart:build"
           }
         },
         "test": {

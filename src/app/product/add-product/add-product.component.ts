@@ -10,13 +10,13 @@ import { ProductService } from 'src/app/shared/product.service';
 export class AddProductComponent {
 
   productForm: FormGroup = new FormGroup({
-    name: new FormControl('', [Validators.required]),
-    category: new FormControl('', [Validators.required]),
-    brand: new FormControl('', [Validators.required]),
-    price: new FormControl('', [Validators.required]),
-    quantity: new FormControl('', [Validators.required]),
-    unit: new FormControl('', [Validators.required])
-  })
+    pname: new FormControl('', [Validators.required]),
+    pcategory: new FormControl('', [Validators.required]),
+    pbrand: new FormControl('', [Validators.required]),
+    pprice: new FormControl('', [Validators.required]),
+    pquantity: new FormControl('', [Validators.required]),
+    punit: new FormControl('', [Validators.required])
+  });
 
   constructor(private ps: ProductService){}
 

@@ -1,0 +1,69 @@
+<div class="order-container container-fluid g-0">
+    <div class="card-header">
+      <h4>SN Mart Invoice</h4>
+    </div>
+      <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Bill No.</th>
+                <th scope="col">Date</th>
+                <th scope="col">Sell To</th>
+                <th scope="col">Payment Mode</th>
+                <!-- <th scope="col">Paid</th> -->
+                <th scope="col">Total Amount</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+          <!-- Sell Payment Details -->
+            <tr *ngFor ="let item of userList">
+              <!-- <table>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Brand</th>
+                    <th>Price</th>
+                    <th>Unit</th>
+                    <th>Quantity</th>
+                  </tr>
+                </thead>
+                <tbody>
+                   //Cart Product History item.orderHistory
+                  <tr *ngFor="let cartItems of cartList">
+                    <td>{{cartItems.cName}}</td>
+                    <td>{{cartItems.cCategory}}</td>
+                    <td>{{cartItems.cBrand}}</td>
+                    <td>{{cartItems.cPrice}}</td>
+                    <td>{{cartItems.cUnit}}</td>
+                    <td>{{cartItems.cQuantity}}</td>
+                  </tr>
+              </table> -->
+                <td>{{item.billNo}}</td>
+                <td>{{item.date | date : 'YYYY-MM-dd hh:mm:ss' }}</td>
+                <td>{{item.user}}</td>
+                <td>{{item.paymentMode}}</td>
+                <td>{{item.totalAmount}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+    <!-- <div class="card-header">
+      <div class="header-item">Bill No.</div>
+      <div class="header-item">Date</div>
+      <div class="header-item">Sell To</div>
+      <div class="header-item">Payment Mode</div>
+      <div class="header-item">Paid</div>
+      <div class="header-item">Total Amount</div>
+      <div class="action"></div>
+    </div>
+    <div class="card-body">
+      <div class="body-item">Bill No.</div>
+      <div class="body-item">Date</div>
+      <div class="body-item">Sell To</div>
+      <div class="body-item">Payment Mode</div>
+      <div class="body-item">Paid</div>
+      <div class="body-item">Total Amount</div>
+      <div class="action"></div>
+    </div> -->

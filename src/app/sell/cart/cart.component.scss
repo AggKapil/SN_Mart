@@ -1,4 +1,28 @@
-.table-head, .table-row{
-    display:flex;
+.cart-container{
+    background-color: orange;
+    height: 400px;
+    overflow:auto;
+    padding-right: 10x;
+}
+
+.paymentMode-select{
+    width:100%;
+}
+
+// .table-head, .table-row{
+//     display:flex;
+//     justify-content: space-evenly;
+// }
+
+.footer{
+    display: flex;
     justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.sellForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2%;
+     
 }

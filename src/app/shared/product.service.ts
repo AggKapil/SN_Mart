@@ -22,49 +22,49 @@ export class ProductService {
   initProducts ():Product[] {
     return [
       {
-        id:'xyz1',
-        name: 'Bread',
-        category: 'Bun',
-        brand: 'Amul',
-        price: 12,
-        quantity: '10',
-        unit: '900'
+        pId:'xyz1',
+        pName: 'Bread',
+        pCategory: 'Bun',
+        pBrand: 'Amul',
+        pPrice: 12,
+        pQuantity: '10',
+        pUnit: '900'
       },
       {
-        id:'xyz2',
-        name: 'Tond',
-        category: 'Amul',
-        brand: 'Amul',
-        price: 12,
-        quantity: '10',
-        unit: '900'
+        pId:'xyz2',
+        pName: 'Tond',
+        pCategory: 'Amul',
+        pBrand: 'Amul',
+        pPrice: 12,
+        pQuantity: '10',
+        pUnit: '900'
       },
       {
-        id:'xyz3',
-        name: 'Kiss Me',
-        category: 'Chocolate',
-        brand: 'Amul',
-        price: 12,
-        quantity: '10',
-        unit: '900'
+        pId:'xyz3',
+        pName: 'Kiss Me',
+        pCategory: 'Chocolate',
+        pBrand: 'Amul',
+        pPrice: 12,
+        pQuantity: '10',
+        pUnit: '900'
       },
       {
-        id:'xyz4',
-        name: 'Fruity',
-        category: 'Cold Drink',
-        brand: 'Amul',
-        price: 12,
-        quantity: '10',
-        unit: '900'
+        pId:'xyz4',
+        pName: 'Fruity',
+        pCategory: 'Cold Drink',
+        pBrand: 'Amul',
+        pPrice: 12,
+        pQuantity: '10',
+        pUnit: '900'
       },
       {
-        id:'xyz5',
-        name: 'Burger',
-        category: 'Food',
-        brand: 'McDonal',
-        price: 250,
-        quantity: '10',
-        unit: '6 pcs'
+        pId:'xyz5',
+        pName: 'Burger',
+        pCategory: 'Food',
+        pBrand: 'McDonal',
+        pPrice: 250,
+        pQuantity: '10',
+        pUnit: '6 pcs'
       }
     ]
   }

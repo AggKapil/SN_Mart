@@ -1,5 +1,42 @@
-<nav>
+<nav class="navbar navbar-expand navbar-dark bg-dark px-2">
+    <div class="side-nav-button p-2 me-3 text-light" (click)="SideNavToggle()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <a class="navbar-brand px-4" routerLink="/product">SN Mart</a>
+
+    <form class="search-bar d-flex me-5">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+    
+    <div class="navbar-collapse">
+        <ul class="navbar-nav ">
+            <li class="navbar-item" *ngFor="let menu of menus" (click)="navigateMenu(menu)">
+                {{menu.name}}
+            </li>
+        </ul>
+    </div>
+
+    <div class="cart-nav-button p-2 me-3 text-light" routerLink="/sell/cart">
+        <i class="fa-solid fa-cart-arrow-down"></i>
+    </div>
+
+    <div class="profile-logo dropstart">
+        <button class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown">
+            Archit
+        </button>
+        <ul class="profile-menu dropdown-menu dropdown-menu-dark">
+            <li routerLink="/account/register" class="dropdown-item">Sign Up</li>
+            <li routerLink="/account/login" class="dropdown-item">Log In</li>
+            <li routerLink="/account/login" class="dropdown-item">Profile</li>
+            <li routerLink="/account/login" class="dropdown-item">Logout</li>
+        </ul>
+    </div>
+</nav>
+
+<!-- <nav>
     <ul>
         <li *ngFor="let menu of menus" (click)="navigateMenu(menu)">{{menu.name}}</li>
     </ul>
-</nav>
+</nav> -->

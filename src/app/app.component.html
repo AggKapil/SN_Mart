@@ -1,2 +1,14 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<div class="container-app">
+<app-header (sideNavToggled)="appSideNavStatus = $event;"></app-header>
+
+<main class="main-cnt">
+    <div id="navID">
+        <app-side-nav [sideNavStatus]="appSideNavStatus" [ngClass]="{'app-side-nav-open': appSideNavStatus}"></app-side-nav>
+    </div>
+    <div class="display-area" [ngClass]="{'display-area-shrink': appSideNavStatus}">
+        <!-- <p>Main Display Area</p> -->
+        <router-outlet ></router-outlet>
+    </div>
+</main>
+<!-- <router-outlet></router-outlet> -->
+</div>

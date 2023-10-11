@@ -1,13 +1,53 @@
-<form class="product_Form" [formGroup]='productForm' (ngSubmit)="addProduct()">
+<div class="container">
+    <form class="border p-3 rounded-3" [formGroup]='productForm' (ngSubmit)="addProduct()">
+        <div class="row g-0">
+            <div class="col text-center p-2 mb-3 bg-light">
+                <span class="fs-3">Add Product</span>
+            </div>
+        </div>
 
-    <input type="text" class="control" placeholder="name" formControlName="name" 
-           [ngClass]="{'error': productForm.controls['name'].invalid && (productForm.controls['name'].dirty  || productForm.controls['name'].touched)}">
-    <input type="text" class="control" placeholder="category" formControlName="category">
-    <input type="text" class="control" placeholder="brand" formControlName="brand">
-    <input type="text" class="control" placeholder="price" formControlName="price">
-    <input type="text" class="control" placeholder="quantity" formControlName="quantity">
-    <input type="text" class="control" placeholder="unit" formControlName="unit">
+        <div class="row">
+            <div class="col mb-3">
+                <input type="text" class="control" placeholder="name" formControlName="pname"
+                    [ngClass]="{'error': productForm.controls['pname'].invalid && (productForm.controls['pname'].dirty  || productForm.controls['pname'].touched)}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mb-3">
+                <input type="text" class="control" placeholder="category" formControlName="pcategory">
+            </div>
+        </div>
 
-    <input type="submit" value="Submit">
+        <div class="row">
+            <div class="col mb-3">
+                <input type="text" class="control" placeholder="brand" formControlName="pbrand">
+            </div>
+        </div>
 
-</form>
+        <div class="row">
+            <div class="col mb-3">
+                <input type="text" class="control" placeholder="price" formControlName="pprice">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col mb-3">
+                <input type="text" class="control" placeholder="quantity" formControlName="pquantity">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col mb-3">
+                <input type="text" class="control" placeholder="unit" formControlName="punit">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6 offset-3">
+                <div class="d-grid">
+                    <input class="btn btn-primary" type="submit" value="Submit">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
